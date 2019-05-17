@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.css';
 import Welcome from './views/Welcome'
+import Room from './views/Room'
 import withStyles from '@material-ui/core/styles/withStyles'
+import Navbar from './MyComponents/Navbar'
 
 const styles={
    main:{
-    // backgroundColor:"crimson"
+     padding:'0 15px'
    }
 }
 
@@ -13,9 +15,12 @@ const styles={
 const App=(props)=>{
   const {classes}=props
   return (
+    <Fragment>
+    <Navbar/>
     <div className={classes.main}>
-      <Welcome/>
+      <Room/>
     </div>
+    </Fragment>
   );
 }
 
