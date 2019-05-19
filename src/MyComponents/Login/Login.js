@@ -1,7 +1,9 @@
 import React from 'react'
 import {Input, Paper, Typography, Grid, Fab, InputLabel} from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
+import {Link} from 'react-router-dom'
 
+//Style
 const styles = theme => ({
     root: {
       marginTop:"30px",
@@ -31,12 +33,13 @@ const styles = theme => ({
     
 });
 
+//Component
+
 const Login=(props)=>{
     const { classes } = props;
   
     return (
       <div>
-       
           <Grid container  spacing={40} className={classes.root}>
             <Grid item md={6} className={classes.firstGrid}>
               <Paper elevation={8} className={classes.paper}>
@@ -46,7 +49,7 @@ const Login=(props)=>{
               <img alt="" className={classes.image} src="images/group.jpg"/>
               <InputLabel>Room Number</InputLabel><br/>
               <Input autoFocus/><br/><br/>
-              <Fab className={classes.button} variant="extended" color="secondary" size="large">Join</Fab>
+              <Link to="/room"><Fab className={classes.button} variant="extended" color="secondary" size="large">Join</Fab></Link>
               </Paper>
             </Grid>
 

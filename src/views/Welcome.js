@@ -4,7 +4,7 @@ import Login from '../MyComponents/Login'
 
 const Welcome=()=>{
     return(<div>
-        <Navbar/>
+        
         <Login/>
         </div>
     )

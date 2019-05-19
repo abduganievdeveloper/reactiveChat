@@ -15,7 +15,7 @@ const styles={
 const Members=(props)=>{
   const {classes}=props
   return(
-    <Paper className={classes.members}>
+    <Paper className={classes.members} elevation={2}>
       <MenuList>
         <Member name="Abdumalik" last="How are you bro ..."/> 
         <Member name="Abdumalik" last="How are you bro ..."/>

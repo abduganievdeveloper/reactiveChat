@@ -2,7 +2,7 @@ import React from 'react'
 import {AppBar, Typography} from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-const brHeight=window.innerHeight
+const brHeight=window.innerHeight>700?window.innerHeight:700
 const styles={
     content:{
         maxHeight:brHeight*0.1,

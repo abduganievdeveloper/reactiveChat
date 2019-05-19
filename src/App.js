@@ -4,6 +4,7 @@ import Welcome from './views/Welcome'
 import Room from './views/Room'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Navbar from './MyComponents/Navbar'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 const styles={
    main:{
@@ -18,7 +19,13 @@ const App=(props)=>{
     <Fragment>
     <Navbar/>
     <div className={classes.main}>
-      <Room/>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Welcome} exact/>
+          <Route path="/room" component={Room} exact/>
+        </Switch>
+      </BrowserRouter>
+      
     </div>
     </Fragment>
   );
