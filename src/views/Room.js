@@ -1,25 +1,32 @@
-import React from 'react';
-import {Grid} from '@material-ui/core';
-import Navbar from '../MyComponents/Navbar'
+import React, {Fragment} from 'react';
+import {Grid, Paper, Typography} from '@material-ui/core';
 import withStyles from '@material-ui/core/styles/withStyles'
-import Contacts from '../MyComponents/Contacts'
+import Members from '../MyComponents/Members'
+import Messaging from '../MyComponents/Messaging'
 
+const appHeight=window.innerHeight*0.85;
 const styles={
-  something:{
-    color:"deepskyblue"
-  }
+  room:{
+    height:appHeight
+  },
+  
+  text:{
+    height:appHeight
+  },
+ 
 }
 
 const Room=(props)=>{
   const { classes } = props;
   return (
-    <Grid container>
+    <Grid container className={classes.room}>
+      <Grid item md={3} >
        
-      <Grid item md={3}>
-        <Contacts/>
-      </Grid>
-      <Grid item>
         
+        
+      </Grid>
+      <Grid item className={classes.text} md={9}> 
+        <Messaging/>
       </Grid>
     </Grid>
     

@@ -2,12 +2,13 @@ import React from 'react'
 import {AppBar, Typography} from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-
+const brHeight=window.innerHeight
 const styles={
     content:{
-        padding:"30px",
-        marginBottom:"20px",
-        backgroundColor:"#45aaf2"
+        maxHeight:brHeight*0.1,
+        marginBottom:brHeight*0.05,
+        backgroundColor:"#45aaf2",
+        padding:'15px'
     }
 
 }

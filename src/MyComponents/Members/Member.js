@@ -1,7 +1,7 @@
 import React from 'react'
 import {MenuItem, ListItemText} from '@material-ui/core'
 
-const Contact=(props)=>{
+const Member=(props)=>{
     const {name, last}=props
     return (
       <MenuItem >          
@@ -9,4 +9,4 @@ const Contact=(props)=>{
       </MenuItem>
     )
 }
-export default Contact
+export default Member
