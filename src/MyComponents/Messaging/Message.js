@@ -7,7 +7,6 @@ const styles={
     padding:"10px",
     backgroundColor:"#007bff",
     width:'60%',
-    float:"right",
     marginLeft:'10px',
     marginRight:'10px',
     color:'white'
@@ -17,8 +16,8 @@ const styles={
       marginTop:'5px'
   },
   avatar:{
-    float:'right',
-    width:'10%'
+    margin:'10px',
+   
   },
   message:{
       fontStyle:"normal",
@@ -30,19 +29,17 @@ const styles={
 }
 
 const Message=(props)=>{
-    const {classes, message, author}=props
+    const {classes, message, author, side}=props
     return(
         <div className={classes.line}>
-          <div className={classes.avatar}>
-
-         <Avatar />
-        </div>
-        <Paper className={classes.messageBox}>
+          <div className={classes.avatar}  style={{float:side}}> 
+            <Avatar/> 
+          </div>
+        <Paper className={classes.messageBox} style={{float:side}}>
            <Typography color="inherit" component="p" paragraph gutterBottom className={classes.message}>{message}</Typography>
            <Typography component="small" color="inherit" className={classes.author}>{author}</Typography>
         </Paper>
-        
-        </div>
+          </div>
     )
 }
 

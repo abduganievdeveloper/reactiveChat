@@ -43,8 +43,10 @@ const styles={
 const Messaging=(props)=>{
     const {classes}=props
 
-    var messages=[{message:'Hello World', author:'Abdumalik'}]
-    var messageList=messages.map(m=><Message key={m.author}  message={m.message} author={m.author}/>)
+    var messages=[{message:'Hello World', author:'Abdumalik'},
+    {message:'Hello React', author:'Makhmud'}
+  ]
+    var messageList=messages.map(m=><Message key={m.author} side="right"  message={m.message} author={m.author}/>)
 
     const sendIt=(e)=>{
       const message={message:e.target.value,author:'Somebody'}
@@ -56,6 +58,7 @@ const Messaging=(props)=>{
         <Paper className={classes.messagingCont}>
         <div className={classes.messages}>  
           {messageList}
+          <Message author="Unknown" message="hey yo" side="left"/>
         </div>
         </Paper>
         <Paper className={classes.inputBox}>
